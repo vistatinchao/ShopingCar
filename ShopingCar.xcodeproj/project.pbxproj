@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		041AE95D1E1F3B6600271D9C /* SCPriceBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 041AE95C1E1F3B6600271D9C /* SCPriceBar.m */; };
+		041AE9601E1F3F1600271D9C /* UIView+ZCExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 041AE95F1E1F3F1600271D9C /* UIView+ZCExtension.m */; };
+		041AE9631E1F3F4B00271D9C /* SCConst.m in Sources */ = {isa = PBXBuildFile; fileRef = 041AE9621E1F3F4B00271D9C /* SCConst.m */; };
+		041AE9651E1F43B000271D9C /* wine.plist in Resources */ = {isa = PBXBuildFile; fileRef = 041AE9641E1F43B000271D9C /* wine.plist */; };
+		041AE9681E1F502400271D9C /* SCCircleButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 041AE9671E1F502400271D9C /* SCCircleButton.m */; };
 		0498744A1E1E419D00534F15 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 049874491E1E419D00534F15 /* main.m */; };
 		049874551E1E419D00534F15 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 049874541E1E419D00534F15 /* Assets.xcassets */; };
 		049874681E1E44D800534F15 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 049874651E1E44D800534F15 /* AppDelegate.m */; };
@@ -18,6 +23,15 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		041AE95B1E1F3B6600271D9C /* SCPriceBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCPriceBar.h; sourceTree = "<group>"; };
+		041AE95C1E1F3B6600271D9C /* SCPriceBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCPriceBar.m; sourceTree = "<group>"; };
+		041AE95E1E1F3F1600271D9C /* UIView+ZCExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+ZCExtension.h"; sourceTree = "<group>"; };
+		041AE95F1E1F3F1600271D9C /* UIView+ZCExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+ZCExtension.m"; sourceTree = "<group>"; };
+		041AE9611E1F3F4B00271D9C /* SCConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCConst.h; sourceTree = "<group>"; };
+		041AE9621E1F3F4B00271D9C /* SCConst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCConst.m; sourceTree = "<group>"; };
+		041AE9641E1F43B000271D9C /* wine.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = wine.plist; sourceTree = "<group>"; };
+		041AE9661E1F502400271D9C /* SCCircleButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCCircleButton.h; sourceTree = "<group>"; };
+		041AE9671E1F502400271D9C /* SCCircleButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCCircleButton.m; sourceTree = "<group>"; };
 		049874451E1E419C00534F15 /* ShopingCar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShopingCar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		049874491E1E419D00534F15 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		049874541E1E419D00534F15 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -80,6 +94,7 @@
 		049874481E1E419D00534F15 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				041AE9641E1F43B000271D9C /* wine.plist */,
 				049874541E1E419D00534F15 /* Assets.xcassets */,
 				049874591E1E419D00534F15 /* Info.plist */,
 				049874491E1E419D00534F15 /* main.m */,
@@ -120,6 +135,8 @@
 		049874621E1E44D800534F15 /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				041AE95E1E1F3F1600271D9C /* UIView+ZCExtension.h */,
+				041AE95F1E1F3F1600271D9C /* UIView+ZCExtension.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -131,6 +148,8 @@
 				049874651E1E44D800534F15 /* AppDelegate.m */,
 				0498746A1E1E459200534F15 /* SCNavigationViewController.h */,
 				0498746B1E1E459200534F15 /* SCNavigationViewController.m */,
+				041AE9611E1F3F4B00271D9C /* SCConst.h */,
+				041AE9621E1F3F4B00271D9C /* SCConst.m */,
 			);
 			path = Other;
 			sourceTree = "<group>";
@@ -149,6 +168,10 @@
 			children = (
 				049874701E1E45DC00534F15 /* SCTableViewCell.h */,
 				049874711E1E45DC00534F15 /* SCTableViewCell.m */,
+				041AE95B1E1F3B6600271D9C /* SCPriceBar.h */,
+				041AE95C1E1F3B6600271D9C /* SCPriceBar.m */,
+				041AE9661E1F502400271D9C /* SCCircleButton.h */,
+				041AE9671E1F502400271D9C /* SCCircleButton.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -234,6 +257,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				049874551E1E419D00534F15 /* Assets.xcassets in Resources */,
+				041AE9651E1F43B000271D9C /* wine.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -295,7 +319,11 @@
 				049874681E1E44D800534F15 /* AppDelegate.m in Sources */,
 				0498744A1E1E419D00534F15 /* main.m in Sources */,
 				049874721E1E45DC00534F15 /* SCTableViewCell.m in Sources */,
+				041AE9681E1F502400271D9C /* SCCircleButton.m in Sources */,
+				041AE95D1E1F3B6600271D9C /* SCPriceBar.m in Sources */,
+				041AE9631E1F3F4B00271D9C /* SCConst.m in Sources */,
 				0498746F1E1E45B600534F15 /* SCViewController.m in Sources */,
+				041AE9601E1F3F1600271D9C /* UIView+ZCExtension.m in Sources */,
 				0498746C1E1E459200534F15 /* SCNavigationViewController.m in Sources */,
 				049874751E1E45F900534F15 /* SCShopList.m in Sources */,
 			);
@@ -445,6 +473,7 @@
 				0498745E1E1E419D00534F15 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

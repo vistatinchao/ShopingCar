@@ -8,6 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
+NS_ASSUME_NONNULL_BEGIN
+@class SCShopList;
 @interface SCTableViewCell : UITableViewCell
 
+/** 商品模型属性 */
+@property (nonatomic,strong,nullable) SCShopList *shopList;
+
++(__kindof SCTableViewCell *)cellWithTableView:(UITableView *)tableView andIndexPath:(NSIndexPath *)indexPath;
 @end
+NS_ASSUME_NONNULL_END

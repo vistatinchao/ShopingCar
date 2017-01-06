@@ -8,8 +8,30 @@
 
 #ifndef PrefixHeader_pch
 #define PrefixHeader_pch
+/** Custorm NSLog */
+#ifdef DEBUG
+#define SCLog(...) NSLog(__VA_ARGS__)
+#else
+#define SCLog(...)
+#endif
 
-// Include any system framework and library headers here that should be included in all compilation units.
-// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+/** 包含的头文件 */
+#import <MJExtension.h>
+#import "UIView+ZCExtension.h"
+#import "SCConst.h"
 
+/* 常用的宏 */
+
+#define SCLogFunc SCLog(@"%s",__func__)
+#define SCNotiCenter [NSNotificationCenter defaultCenter]
+#define SCRGBColor(r,g,b) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:1.0]
+// 随机色
+#define SCRandomColor SCRGBColor(arc4random_uniform(256), arc4random_uniform(256), arc4random_uniform(256))
+#define SCScreenW [UIScreen mainScreen].bounds.size.width
+#define SCScreenH [UIScreen mainScreen].bounds.size.height
+#define SCScreenF [UIScreen mainScreen].bounds
+#define SCLastWindow [UIApplication sharedApplication].keyWindow
+#define SCNavBarHeight 64
+#define SCTabBarHeight 49
 #endif /* PrefixHeader_pch */
+
