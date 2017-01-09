@@ -19,6 +19,7 @@
 #import <MJExtension.h>
 #import "UIView+ZCExtension.h"
 #import "SCConst.h"
+#import "NSString+SCExtension.h"
 
 /* 常用的宏 */
 

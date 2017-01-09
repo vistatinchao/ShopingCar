@@ -11,4 +11,9 @@ CGFloat const SCPriceTabBarHeight = 44;
 
 NSString *const SCCellID = @"ShopingCarCellID";
 
-CGFloat const SCCellHeight = 100;
+CGFloat const SCCellHeight = 150;
+
+CGFloat const SCCellMargin = 15;
+CGFloat const SCCellNameFontSize = 20;
+CGFloat const SCCellImageWH =70;
+CGFloat const SCCellPlusBtnAndMinBtnWH = 40;

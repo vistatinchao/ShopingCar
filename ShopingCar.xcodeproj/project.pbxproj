@@ -12,6 +12,7 @@
 		041AE9631E1F3F4B00271D9C /* SCConst.m in Sources */ = {isa = PBXBuildFile; fileRef = 041AE9621E1F3F4B00271D9C /* SCConst.m */; };
 		041AE9651E1F43B000271D9C /* wine.plist in Resources */ = {isa = PBXBuildFile; fileRef = 041AE9641E1F43B000271D9C /* wine.plist */; };
 		041AE9681E1F502400271D9C /* SCCircleButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 041AE9671E1F502400271D9C /* SCCircleButton.m */; };
+		044375221E2392110016D913 /* NSString+SCExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 044375211E2392110016D913 /* NSString+SCExtension.m */; };
 		0498744A1E1E419D00534F15 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 049874491E1E419D00534F15 /* main.m */; };
 		049874551E1E419D00534F15 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 049874541E1E419D00534F15 /* Assets.xcassets */; };
 		049874681E1E44D800534F15 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 049874651E1E44D800534F15 /* AppDelegate.m */; };
@@ -32,6 +33,8 @@
 		041AE9641E1F43B000271D9C /* wine.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = wine.plist; sourceTree = "<group>"; };
 		041AE9661E1F502400271D9C /* SCCircleButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCCircleButton.h; sourceTree = "<group>"; };
 		041AE9671E1F502400271D9C /* SCCircleButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCCircleButton.m; sourceTree = "<group>"; };
+		044375201E2392110016D913 /* NSString+SCExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+SCExtension.h"; sourceTree = "<group>"; };
+		044375211E2392110016D913 /* NSString+SCExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+SCExtension.m"; sourceTree = "<group>"; };
 		049874451E1E419C00534F15 /* ShopingCar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShopingCar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		049874491E1E419D00534F15 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		049874541E1E419D00534F15 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -137,6 +140,8 @@
 			children = (
 				041AE95E1E1F3F1600271D9C /* UIView+ZCExtension.h */,
 				041AE95F1E1F3F1600271D9C /* UIView+ZCExtension.m */,
+				044375201E2392110016D913 /* NSString+SCExtension.h */,
+				044375211E2392110016D913 /* NSString+SCExtension.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -324,6 +329,7 @@
 				041AE9631E1F3F4B00271D9C /* SCConst.m in Sources */,
 				0498746F1E1E45B600534F15 /* SCViewController.m in Sources */,
 				041AE9601E1F3F1600271D9C /* UIView+ZCExtension.m in Sources */,
+				044375221E2392110016D913 /* NSString+SCExtension.m in Sources */,
 				0498746C1E1E459200534F15 /* SCNavigationViewController.m in Sources */,
 				049874751E1E45F900534F15 /* SCShopList.m in Sources */,
 			);

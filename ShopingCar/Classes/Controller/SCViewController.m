@@ -45,7 +45,6 @@ NS_ASSUME_NONNULL_BEGIN
     tableView.scrollIndicatorInsets = tableView.contentInset;
     tableView.delegate = self;
     tableView.dataSource = self;
-    tableView.rowHeight = SCCellHeight;
     [tableView registerClass:[SCTableViewCell class] forCellReuseIdentifier:SCCellID];
     self.scTableView = tableView;
 
@@ -58,7 +57,7 @@ NS_ASSUME_NONNULL_BEGIN
     self.priceBar = priceBar;
 }
 
-#pragma mark tableView --Datasource
+#pragma mark tableView --Datasource && Delegate
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     return self.shops.count;
@@ -68,6 +67,11 @@ NS_ASSUME_NONNULL_BEGIN
     SCTableViewCell *cell = [SCTableViewCell cellWithTableView:tableView andIndexPath:indexPath];
     cell.shopList = self.shops[indexPath.row];
     return cell;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+
+    return self.shops[indexPath.row].cellHeight;
 }
 
 

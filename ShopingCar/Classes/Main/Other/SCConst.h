@@ -13,3 +13,11 @@ UIKIT_EXTERN CGFloat const SCPriceTabBarHeight;
 UIKIT_EXTERN NSString *const SCCellID;
 /** 商品CellHeight */
 UIKIT_EXTERN CGFloat const SCCellHeight;
+/** 商品CellMargin */
+UIKIT_EXTERN CGFloat const SCCellMargin;
+/**  模型购物车cellNameFont */
+UIKIT_EXTERN CGFloat const SCCellNameFontSize;
+/**  模型购物车cellImageWH */
+UIKIT_EXTERN CGFloat const SCCellImageWH;
+/**  模型购物车cellPlusBtnAndMinBtnWH */
+UIKIT_EXTERN CGFloat const SCCellPlusBtnAndMinBtnWH;
