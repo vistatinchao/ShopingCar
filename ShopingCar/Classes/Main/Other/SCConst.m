@@ -17,3 +17,6 @@ CGFloat const SCCellMargin = 15;
 CGFloat const SCCellNameFontSize = 20;
 CGFloat const SCCellImageWH =70;
 CGFloat const SCCellPlusBtnAndMinBtnWH = 40;
+NSString *const SCCellDidClickPlusBtnUpdatePriceBar=@"SCCellDidClickPlusBtnUpdatePriceBar";
+NSString *const SCCellDidClickMinBtnUpdatePriceBar=@"SCCellDidClickMinBtnUpdatePriceBar";
+NSString *const SCKeyCellDidClickPlusBtnOrMinBtnUpdatePriceBar = @" SCKeyCellDidClickPlusBtnOrMinBtnUpdatePriceBar";

@@ -23,8 +23,8 @@
 @property (nonatomic,weak)SCCircleButton *sc_minBtn;
 /** 商品cell数量 */
 @property (nonatomic,weak)UILabel *sc_countLabel;
-
-
+/** 所在的tableview */
+@property (nonatomic,weak)UITableView *tableView;
 @end
 
 @implementation SCTableViewCell
@@ -32,6 +32,7 @@
 - (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier{
 
     if (self = [super initWithStyle:style reuseIdentifier:reuseIdentifier]) {
+        self.selectionStyle = UITableViewCellSelectionStyleNone;
         // 布局子空间
         [self sc_layoutSubView];
     }
@@ -66,6 +67,7 @@
     [sc_plusBtn setTitle:@"+" forState:UIControlStateNormal];
     [sc_plusBtn.titleLabel setFont:[UIFont boldSystemFontOfSize:30]];
     [sc_plusBtn setTitleColor:[UIColor blueColor] forState:UIControlStateNormal];
+    [sc_plusBtn addTarget:self action:@selector(countChange:) forControlEvents:UIControlEventTouchUpInside];
     self.sc_plusBtn = sc_plusBtn;
 
     /** 商品cell——按钮 */
@@ -73,7 +75,10 @@
     [self.contentView addSubview:sc_minBtn];
     [sc_minBtn setTitle:@"-" forState:UIControlStateNormal];
     [sc_minBtn.titleLabel setFont:[UIFont boldSystemFontOfSize:30]];
-    [sc_minBtn setTitleColor:[UIColor grayColor] forState:UIControlStateNormal];
+    [sc_minBtn setTitleColor:[UIColor blueColor] forState:UIControlStateNormal];
+    [sc_minBtn setTitleColor:[UIColor grayColor] forState:UIControlStateDisabled];
+    [sc_minBtn addTarget:self action:@selector(countChange:) forControlEvents:UIControlEventTouchUpInside];
+   // sc_minBtn.enabled = NO;
     self.sc_minBtn = sc_minBtn;
 
     /** 商品cell数量 */
@@ -83,6 +88,28 @@
     sc_countLabel.font = [UIFont systemFontOfSize:25];
     self.sc_countLabel = sc_countLabel;
 }
+#pragma mark 监听按钮点击
+- (void)countChange:(UIButton *)btn{
+    // 发通知更新购物栏
+    NSDictionary *dictParama = nil;
+
+    if (btn==self.sc_plusBtn) {// 点击了加号按钮
+        self.shopList.count++;
+        dictParama = @{SCKeyCellDidClickPlusBtnOrMinBtnUpdatePriceBar:self.shopList};
+         [SCNotiCenter postNotificationName:SCCellDidClickPlusBtnUpdatePriceBar object:nil userInfo:dictParama];
+       // self.sc_minBtn.enabled = YES;
+    }else if (btn==self.sc_minBtn){// 点击了➖号按钮
+        self.shopList.count--;
+        dictParama = @{SCKeyCellDidClickPlusBtnOrMinBtnUpdatePriceBar:self.shopList};
+         [SCNotiCenter postNotificationName:SCCellDidClickMinBtnUpdatePriceBar object:nil userInfo:dictParama];
+    }
+    //更新sc_minBtn状态
+    self.sc_minBtn.enabled = self.shopList.count>0;
+
+
+    //刷新表格
+    [self.tableView reloadData];
+}
 
 
 + (SCTableViewCell *)cellWithTableView:(UITableView *)tableView andIndexPath:(NSIndexPath *)indexPath{
@@ -90,6 +117,7 @@
     if (cell == nil) {
         cell = [[self alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:SCCellID];
     }
+    cell.tableView = tableView;
     return cell;
 }
 
@@ -147,6 +175,7 @@
     self.sc_nameLabel.text = shopList.name;
     self.sc_priceLabel.text = [NSString stringWithFormat:@"￥%@",shopList.money];
     self.sc_countLabel.text = [NSString stringWithFormat:@"%zd",shopList.count];
+    self.sc_minBtn.enabled = shopList.count>0;
 }
 
 

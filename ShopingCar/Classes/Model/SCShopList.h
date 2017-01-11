@@ -4,7 +4,7 @@
 //
 //  Created by mac on 2017/1/5.
 //  Copyright © 2017年 United Network Services Ltd. of Shenzhen City. All rights reserved.
-// SCShopList模型
+//  SCShopList模型
 
 #import <Foundation/Foundation.h>
 NS_ASSUME_NONNULL_BEGIN
@@ -20,7 +20,6 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic,assign) NSUInteger count;
 /**  模型购物车cell高度 */
 @property (nonatomic,assign) CGFloat cellHeight;
-
 
 @end
 NS_ASSUME_NONNULL_END

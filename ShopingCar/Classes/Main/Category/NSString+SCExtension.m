@@ -10,7 +10,7 @@
 
 @implementation NSString (SCExtension)
 
-#pragma mark 私有方法 根据文字自适应尺寸
+#pragma mark  根据文字自适应尺寸
 - (CGSize)sizeWithString:(nullable NSString *)string andFontSize:(nullable UIFont *)font andMaxSize:( CGSize)size{
     
     NSMutableDictionary *attributeDict = [NSMutableDictionary dictionary];

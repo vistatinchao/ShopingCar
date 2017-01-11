@@ -21,3 +21,9 @@ UIKIT_EXTERN CGFloat const SCCellNameFontSize;
 UIKIT_EXTERN CGFloat const SCCellImageWH;
 /**  模型购物车cellPlusBtnAndMinBtnWH */
 UIKIT_EXTERN CGFloat const SCCellPlusBtnAndMinBtnWH;
+/**  点击cell子控件Plus按钮 */
+UIKIT_EXTERN NSString *const SCCellDidClickPlusBtnUpdatePriceBar;
+/**  点击cell子控件Min按钮 */
+UIKIT_EXTERN NSString *const SCCellDidClickMinBtnUpdatePriceBar;
+/**  点击cell子控件传递的key */
+UIKIT_EXTERN NSString *const SCKeyCellDidClickPlusBtnOrMinBtnUpdatePriceBar;

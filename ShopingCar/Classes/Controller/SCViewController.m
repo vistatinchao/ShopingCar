@@ -13,7 +13,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface SCViewController ()<UITableViewDelegate,UITableViewDataSource>
+@interface SCViewController ()<UITableViewDelegate,UITableViewDataSource,SCPriceBarDelegate>
 
 /** 商品模型数组 */
 @property (nonatomic,strong)NSMutableArray<SCShopList *> *shops;
@@ -40,6 +40,7 @@ NS_ASSUME_NONNULL_BEGIN
     self.automaticallyAdjustsScrollViewInsets = NO;
     // tableview
     UITableView *tableView = [[UITableView alloc]initWithFrame:self.view.bounds];
+    tableView.backgroundColor = [UIColor lightGrayColor];
     [self.view addSubview:tableView];
     tableView.contentInset = UIEdgeInsetsMake(SCNavBarHeight, 0, SCPriceTabBarHeight, 0);
     tableView.scrollIndicatorInsets = tableView.contentInset;
@@ -51,6 +52,7 @@ NS_ASSUME_NONNULL_BEGIN
     // priceBar
     SCPriceBar *priceBar = [SCPriceBar priceBar];
     [self.view addSubview:priceBar];
+    priceBar.delegate = self;
     priceBar.height = SCPriceTabBarHeight;
     priceBar.width = SCScreenW;
     priceBar.y = self.view.height-SCPriceTabBarHeight;
@@ -72,6 +74,15 @@ NS_ASSUME_NONNULL_BEGIN
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
 
     return self.shops[indexPath.row].cellHeight;
+}
+#pragma mark priceBarDelegate
+- (void)priceBarDidClearShopCar:(SCPriceBar *)priceBar{
+    // 清空数据源
+    for (SCShopList *shop in self.shops) {
+        shop.count=0;
+    }
+    // 刷新表格
+    [self.scTableView reloadData];
 }
 
 

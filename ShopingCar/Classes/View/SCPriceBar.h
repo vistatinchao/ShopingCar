@@ -7,8 +7,23 @@
 //
 
 #import <UIKit/UIKit.h>
+@class SCPriceBar;
+@protocol SCPriceBarDelegate<NSObject>
+@optional
 
+/**
+ 清除购物车
+ */
+-(void)priceBarDidClearShopCar:(SCPriceBar *)priceBar;
+@end
 @interface SCPriceBar : UIView
+/**
+ 初始化
+ */
 +(instancetype)priceBar;
+/**
+ 代理属性
+ */
+@property (nonatomic,weak)id<SCPriceBarDelegate>delegate;
 
 @end
